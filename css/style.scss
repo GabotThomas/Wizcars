@@ -111,8 +111,16 @@ a {
   }
   &__content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    height: 100%;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
   }
   .card-pack {
     position: relative;
@@ -238,6 +246,38 @@ a {
     .item:nth-child(6) {
       grid-row: span 11;
       background: center / cover no-repeat url("../images/GRID/6.jpg");
+    }
+  }
+}
+.footer {
+  background-color: black;
+  padding: 10rem 10%;
+  margin-top: 5rem;
+  &__contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-address {
+      color: white;
+      width: 33%;
+    }
+    &-title {
+      color: white;
+      width: 33%;
+      text-align: center;
+      font-size: 2em;
+      font-weight: 200;
+      font-style: normal;
+      letter-spacing: 0.35em;
+    }
+    &-details {
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      a {
+        color: white;
+      }
     }
   }
 }
