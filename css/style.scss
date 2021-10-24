@@ -1,0 +1,105 @@
+// Put your SCSS here
+
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*PX => REM 16px*62.5%*/
+
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100vw;
+  font: 1.6rem sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
+  margin: 0;
+  font-weight: lighter;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+//bibliotheque
+
+//custom
+.header {
+  background: center / cover no-repeat url("../images/banner.png");
+  height: 100vh;
+}
+.header__title {
+  font-size: 2em;
+  color: white;
+  line-height: 1.5em;
+  letter-spacing: 0.35em;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+}
+.header__menu ul {
+  display: flex;
+  justify-content: center;
+  font-weight: 200;
+  li a {
+    color: white;
+    padding: 1rem 2rem;
+  }
+}
+
+.card__banner {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+  h1 {
+    margin: 2rem;
+  }
+  &-grid {
+    background: center / cover no-repeat url("../images/banner.png");
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    width: 80%;
+    height: 80vh;
+    .item {
+      border: 1rem solid white;
+      transition: border 0.2s;
+      &.bcw {
+        background-color: white;
+      }
+      &:hover {
+        border: 0 solid white;
+      }
+    }
+  }
+}
+.card__packs {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
