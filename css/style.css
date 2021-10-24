@@ -82,7 +82,7 @@ a {
   margin: 2rem;
 }
 .card-banner__grid {
-  background: center/cover no-repeat url("../images/banner.png");
+  background: center/cover no-repeat url("../images/tab.jpg");
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 20% 20% 20% 20% 20%;
@@ -109,7 +109,7 @@ a {
   width: 100%;
   text-align: center;
   font-size: 2em;
-  margin-bottom: 2rem;
+  margin: 5rem 0;
 }
 .card-packs__content {
   display: flex;
@@ -152,6 +152,7 @@ a {
   font-weight: 600;
   z-index: 1;
   padding: 0 3rem;
+  font-size: 1.5em;
 }
 .card-packs .card-pack__content {
   z-index: 1;
