@@ -196,3 +196,9 @@ a {
   text-align: center;
   font-weight: normal;
 }
+.test {
+  color: #fff;
+  background-color: orange;
+  font-size: large;
+  font-weight: 100;
+}
