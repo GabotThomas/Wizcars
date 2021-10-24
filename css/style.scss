@@ -76,7 +76,7 @@ a {
   flex-direction: column;
   font-size: 2rem;
   h1 {
-    margin: 2rem;
+    padding: 2rem;
   }
   &__grid {
     background: center / cover no-repeat url("../images/tab.jpg");
@@ -101,6 +101,8 @@ a {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
   &__title {
     width: 100%;
     text-align: center;
@@ -121,26 +123,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    &.card-pack-colors--yellow {
-      background: center / cover no-repeat url("../images/yellow.png");
-    }
-    &.card-pack-colors--red {
-      background: center / cover no-repeat url("../images/red.jpg");
-    }
-    &.card-pack-colors--black {
-      background: center / cover no-repeat url("../images/black.jpg");
-    }
-    &:after {
-      position: absolute;
-      content: " ";
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      background-color: rgba(0, 0, 0, 0.2);
-    }
-    .card-pack__title {
+    &__title {
       position: relative;
       color: white;
       text-align: center;
@@ -162,7 +145,7 @@ a {
         }
       }
     }
-    .card-pack__price {
+    &__price {
       padding: 1rem;
       width: 100%;
       display: block;
@@ -181,6 +164,32 @@ a {
       &-colors--black {
         background-color: rgba(#6e706d, 0.8);
       }
+    }
+    &.card-pack-colors--yellow {
+      background: center / cover no-repeat url("../images/yellow.png");
+    }
+    &.card-pack-colors--red {
+      background: center / cover no-repeat url("../images/red.jpg");
+    }
+    &.card-pack-colors--black {
+      background: center / cover no-repeat url("../images/black.jpg");
+    }
+    &:after {
+      position: absolute;
+      content: " ";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  &__subtitle {
+    margin-top: 4rem;
+    p {
+      text-align: center;
+      font-weight: normal;
     }
   }
 }

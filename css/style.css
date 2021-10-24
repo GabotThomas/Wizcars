@@ -79,7 +79,7 @@ a {
   font-size: 2rem;
 }
 .card-banner h1 {
-  margin: 2rem;
+  padding: 2rem;
 }
 .card-banner__grid {
   background: center/cover no-repeat url("../images/tab.jpg");
@@ -104,6 +104,8 @@ a {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
 }
 .card-packs__title {
   width: 100%;
@@ -126,26 +128,7 @@ a {
   flex-direction: column;
   justify-content: flex-start;
 }
-.card-packs .card-pack.card-pack-colors--yellow {
-  background: center/cover no-repeat url("../images/yellow.png");
-}
-.card-packs .card-pack.card-pack-colors--red {
-  background: center/cover no-repeat url("../images/red.jpg");
-}
-.card-packs .card-pack.card-pack-colors--black {
-  background: center/cover no-repeat url("../images/black.jpg");
-}
-.card-packs .card-pack:after {
-  position: absolute;
-  content: " ";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.card-packs .card-pack .card-pack__title {
+.card-packs .card-pack__title {
   position: relative;
   color: white;
   text-align: center;
@@ -167,7 +150,7 @@ a {
   content: "✓";
   margin-right: 1rem;
 }
-.card-packs .card-pack .card-pack__price {
+.card-packs .card-pack__price {
   padding: 1rem;
   width: 100%;
   display: block;
@@ -178,12 +161,38 @@ a {
   position: relative;
   font-size: 2rem;
 }
-.card-packs .card-pack .card-pack__price-colors--yellow {
+.card-packs .card-pack__price-colors--yellow {
   background-color: rgba(211, 185, 4, 0.8);
 }
-.card-packs .card-pack .card-pack__price-colors--red {
+.card-packs .card-pack__price-colors--red {
   background-color: rgba(208, 4, 3, 0.8);
 }
-.card-packs .card-pack .card-pack__price-colors--black {
+.card-packs .card-pack__price-colors--black {
   background-color: rgba(110, 112, 109, 0.8);
+}
+.card-packs .card-pack.card-pack-colors--yellow {
+  background: center/cover no-repeat url("../images/yellow.png");
+}
+.card-packs .card-pack.card-pack-colors--red {
+  background: center/cover no-repeat url("../images/red.jpg");
+}
+.card-packs .card-pack.card-pack-colors--black {
+  background: center/cover no-repeat url("../images/black.jpg");
+}
+.card-packs .card-pack:after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.card-packs__subtitle {
+  margin-top: 4rem;
+}
+.card-packs__subtitle p {
+  text-align: center;
+  font-weight: normal;
 }
