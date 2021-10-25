@@ -43,6 +43,12 @@ a {
   color: black;
 }
 
+.container {
+  height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+}
+
 .header {
   background: center/cover no-repeat url("../images/banner.png");
   height: 100vh;
@@ -70,7 +76,6 @@ a {
 }
 
 .card-banner {
-  height: 100vh;
   display: flex;
   overflow: hidden;
   justify-content: center;
@@ -86,11 +91,11 @@ a {
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 20% 20% 20% 20% 20%;
-  width: 80%;
+  width: 100%;
   height: 80vh;
 }
 .card-banner__grid .item {
-  border: 1rem solid white;
+  border: 1.2rem solid white;
   transition: border 0.2s;
 }
 .card-banner__grid .item.bcw {
@@ -101,11 +106,8 @@ a {
 }
 
 .card-packs {
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin: 0 auto;
 }
 .card-packs__title {
   width: 100%;
@@ -122,19 +124,19 @@ a {
 }
 .card-packs__list {
   display: flex;
-  align-items: center;
   justify-content: space-around;
   width: 100%;
+  flex-wrap: wrap;
 }
 .card-packs .card-pack {
   position: relative;
   border-radius: 3rem;
   padding-top: 2rem;
   overflow: hidden;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-bottom: 2rem;
 }
 .card-packs .card-pack__title {
   position: relative;
@@ -206,9 +208,6 @@ a {
 }
 
 .card-coverings {
-  height: 100vh;
-  width: 80%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -285,4 +284,33 @@ a {
 }
 .footer__contact-details a {
   color: white;
+}
+
+@media only screen and (max-width: 1224px) {
+  /* Styles */
+  .container {
+    width: calc(100% - 6rem);
+    margin: 0 3rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  /* Styles */
+  .card-coverings__content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+    grid-auto-flow: row;
+  }
+
+  .card-coverings .card-coverings__content .item {
+    grid-row: span 8;
+  }
+
+  .container {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .card-packs__list {
+    flex-wrap: wrap;
+  }
 }
