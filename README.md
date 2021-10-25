@@ -17,11 +17,15 @@ git checkout -b nom_de_la_branche
 
 ```bash
 git pull origin master
-/*Regler les conflicts si il y'en a, Si conflit:*/
+```
+### Regler les conflicts si il y'en a, Si conflit:
+
+```bash
 git add fichier modifié
 git commit -m "nom du commit"
 git push origin nom_de_la_branche
-
+```
+```bash
 git checkout master
 git merge nom_de_la_branche
 ```
