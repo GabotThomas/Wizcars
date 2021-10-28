@@ -5,6 +5,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   width: 100vw;
@@ -75,8 +76,12 @@ a {
   align-items: center;
   flex-direction: column;
   font-size: 2rem;
-  h1 {
-    padding: 2rem;
+  margin-bottom: 5rem;
+  &__title {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    margin: 5rem 0;
   }
   &__grid {
     display: grid;
@@ -103,6 +108,7 @@ a {
         height: 100%;
         border-radius: 1rem;
         transition: transform 0.3s;
+        cursor: pointer;
 
         &.item__21 {
           grid-column: 1;
@@ -146,6 +152,7 @@ a {
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
+  align-items: center;
   &__title {
     width: 100%;
     text-align: center;
@@ -153,67 +160,109 @@ a {
     margin: 5rem 0;
   }
   &__content {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 10px;
     align-items: center;
-    justify-content: space-around;
+    justify-items: center;
     height: 100%;
+    width: 80%;
 
-    .card-sponsor__audi {
-      width: 300px;
-      height: 300px;
-      background: center / cover no-repeat url(../images/sponsors/audi.jpeg);
+    .card-sponsor__img {
+      width: 100%;
+      height: auto;
       display: flex;
     }
   }
 }
-.card-coverings {
-  height: 100vh;
-  width: 80%;
-  margin: 0 auto;
+
+.card-clients {
+  height: 50vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   &__title {
-    font-size: 2em;
+    width: 100%;
     text-align: center;
+    font-size: 2em;
     margin: 5rem 0;
   }
   &__content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(16, 1fr);
-    grid-auto-flow: column;
     height: 100%;
-    .item {
-      background-color: yellowgreen;
-      border: 1rem solid white;
-      min-width: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-client {
+    position: relative;
+    margin: 0 1rem;
+
+    .client-img{
+      width: 150px;
+      height: 150px;
+      background-color: #000;
+      border-radius: 50%;
     }
-    .item:nth-child(1) {
-      grid-row: span 8;
-      background: center / cover no-repeat url("../images/GRID/1.jpg");
+    .client-img__one {
+      background: center / cover no-repeat url(../images/GRID/1.jpg);
     }
-    .item:nth-child(2) {
-      grid-row: span 8;
-      background: center / cover no-repeat url("../images/GRID/2.jpg");
+    .client-img__two {
+      background: center / cover no-repeat url(../images/GRID/2.jpg);
     }
-    .item:nth-child(3) {
-      grid-row: span 10;
-      background: center / cover no-repeat url("../images/GRID/3.jpg");
+    .client-img__three {
+      background: center / cover no-repeat url(../images/GRID/3.jpg);
     }
-    .item:nth-child(4) {
-      grid-row: span 6;
-      background: center / cover no-repeat url("../images/GRID/4.jpg");
+    .client-img__four {
+      background: center / cover no-repeat url(../images/GRID/4.jpg);
     }
-    .item:nth-child(5) {
-      grid-row: span 5;
-      background: center / cover no-repeat url("../images/GRID/5.jpg");
+    .client-img__five {
+      background: center / cover no-repeat url(../images/GRID/6.jpg);
     }
-    .item:nth-child(6) {
-      grid-row: span 11;
-      background: center / cover no-repeat url("../images/GRID/6.jpg");
+
+    .client-img__overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150px;
+      height: 150px;
+      background: rgba(0, 0, 0, .6);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity .35s;
+      transform: translate(-50%, -50%);
+
+      h2 {
+        font-weight: bold;
+        font-size: 32px;
+      }
+    }
+
+    .client-img__overlay > * {
+      transform: translateY(150px);
+      transition: transform .35s;
+    }
+
+    .client-img__overlay:hover {
+      opacity: 1;
+    }
+
+    .client-img__overlay:hover > * {
+      transform: translateY(0);
+      transition: transform .35s;
     }
   }
 }
+
 .footer {
   background-color: black;
   padding: 10rem 10%;
@@ -246,6 +295,117 @@ a {
     }
   }
 }
-// CODE TEST
 
-//test
+
+// MEDIA 
+
+// @media only screen and (max-width: 1224px) {
+//   /* Styles */
+
+// }
+
+// @media only screen and (max-width: 1024px) {
+//   /* Styles */
+  
+// }
+
+@media screen and (max-width: 768px) {
+  .header__menu > ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card-banner {
+    height: 80vh;
+  
+    .card-banner__grid {
+      display: flex;
+      flex-direction: column;
+
+      .items {
+        text-align: center;
+
+        &.items__grid {
+          display: flex;
+          flex-direction: column;
+        }
+
+        &.bgc__1 {
+          display: none;
+        }
+
+        &.bgc__2 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .card-sponsors {
+    margin-bottom: 5rem;
+
+    .card-sponsors__content {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
+
+  .card-clients {
+    height: 100vh;
+    overflow: hidden;
+    &__content {
+      width: 80%;
+      display: grid;
+      place-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 2rem;
+      column-gap: 2rem;
+
+      .card-client {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+
+        .client-img {
+          width: 200px;
+          height: 200px;
+        }
+
+        .client-img__overlay {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
+
+  .footer{
+    padding: 5rem 10%;
+
+    .footer__contact {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 2rem;
+
+      &-title {
+        grid-column: 1 / 3;
+        width: 100%;
+      }
+
+      &-address {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+      }
+
+      &-details {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        width: 100%;
+      }
+    }
+  }
+}

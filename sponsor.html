@@ -14,18 +14,20 @@
 
 <body>
     <header class="header">
-        <h1 class="header__title">Wizcars - sponsors</h1>
+        <h1 class="header__title">Wizcars</h1>
         <nav class="header__menu">
             <ul>
                 <li><a href="./index.html">Accueil</a></li>
-                <li><a href="./index.html">Notre service</a></li>
+                <li><a href="#nous">Nous sommes</a></li>
+                <li><a href="#sponsors">Nos sponsors</a></li>
+                <li><a href="#avis">Avis clients</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="card-banner">
-            <h1>Qui sommes nous ?</h1>
+        <section class="card-banner" id="nous">
+            <h2 class="card-banner__title">Qui sommes nous ?</h2>
             <article class="card-banner__grid">
                 <div class="items items__grid">
                     <div class="item item__21">
@@ -50,25 +52,52 @@
                 </div>
             </article>
         </section>
-        <article class="card-sponsors">
+        <article class="card-sponsors" id="sponsors">
             <h2 class="card-sponsors__title">Nos sponsors</h2>
             <section class="card-sponsors__content">
-                <div class="card-sponsor__audi">
-                    <article class="card-sponsor__img"></article>
+                <img class="card-sponsor__img" src="./images/sponsors/audi_logo.jpeg" alt="">
+                <img class="card-sponsor__img" src="./images/sponsors/feuvert_logo.jpeg" alt="">
+                <img class="card-sponsor__img" src="./images/sponsors/bmw_logo.png" alt=""
+                    style="width: 100px; height: 100px;">
+                <img class="card-sponsor__img" src="./images/sponsors/bosh_logo.png" alt="">
+                <img class="card-sponsor__img" src="./images/sponsors/lemans_logo.png" alt="">
+                <img class="card-sponsor__img" src="./images/sponsors/michelin_logo.png" alt="">
+                <img class="card-sponsor__img" src="./images/sponsors/mercedes_logo.png" alt="">
+            </section>
+        </article>
+        <section class="card-clients" id="avis">
+            <h2 class="card-clients__title">Ils nous ont fait confiance</h2>
+            <article class="card-clients__content">
+                <div class="card-client">
+                    <div class="client-img client-img__one"></div>
+                    <div class="client-img__overlay">
+                        <p>Lucas</p>
+                        <H2>5/5</H2>
+                    </div>
                 </div>
-            </section>
-        </article>
-        <article class="card-coverings">
-            <h3 class="card-coverings__title">Nos derniers coverings</h3>
-            <section class="card-coverings__content">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-            </section>
-        </article>
+                <div class="card-client">
+                    <div class="client-img client-img__two"></div>
+                    <div class="client-img__overlay">
+                        <p>Tristan</p>
+                        <H2>4/5</H2>
+                    </div>
+                </div>
+                <div class="card-client">
+                    <div class="client-img client-img__three"></div>
+                    <div class="client-img__overlay">
+                        <p>Elisa</p>
+                        <H2>4.5/5</H2>
+                    </div>
+                </div>
+                <div class="card-client">
+                    <div class="client-img client-img__four"></div>
+                    <div class="client-img__overlay">
+                        <p>Maxime</p>
+                        <H2>5/5</H2>
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
     <footer class="footer" id="contact">
         <address class="footer__contact">

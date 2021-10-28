@@ -2,6 +2,7 @@
 /*PX => REM 16px*62.5%*/
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -76,9 +77,13 @@ a {
   align-items: center;
   flex-direction: column;
   font-size: 2rem;
+  margin-bottom: 5rem;
 }
-.card-banner h1 {
-  padding: 2rem;
+.card-banner__title {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  margin: 5rem 0;
 }
 .card-banner__grid {
   display: grid;
@@ -106,6 +111,7 @@ a {
   height: 100%;
   border-radius: 1rem;
   transition: transform 0.3s;
+  cursor: pointer;
 }
 .card-banner__grid .items .item.item__21 {
   grid-column: 1;
@@ -143,6 +149,7 @@ a {
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
+  align-items: center;
 }
 .card-sponsors__title {
   width: 100%;
@@ -151,65 +158,98 @@ a {
   margin: 5rem 0;
 }
 .card-sponsors__content {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 10px;
   align-items: center;
-  justify-content: space-around;
+  justify-items: center;
   height: 100%;
+  width: 80%;
 }
-.card-sponsors__content .card-sponsor__audi {
-  width: 300px;
-  height: 300px;
-  background: center/cover no-repeat url(../images/sponsors/audi.jpeg);
+.card-sponsors__content .card-sponsor__img {
+  width: 100%;
+  height: auto;
   display: flex;
 }
 
-.card-coverings {
-  height: 100vh;
-  width: 80%;
-  margin: 0 auto;
+.card-clients {
+  height: 50vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.card-coverings__title {
-  font-size: 2em;
+.card-clients__title {
+  width: 100%;
   text-align: center;
+  font-size: 2em;
   margin: 5rem 0;
 }
-.card-coverings__content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(16, 1fr);
-  grid-auto-flow: column;
+.card-clients__content {
   height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.card-coverings__content .item {
-  background-color: yellowgreen;
-  border: 1rem solid white;
-  min-width: 300px;
+.card-clients .card-client {
+  position: relative;
+  margin: 0 1rem;
 }
-.card-coverings__content .item:nth-child(1) {
-  grid-row: span 8;
-  background: center/cover no-repeat url("../images/GRID/1.jpg");
+.card-clients .card-client .client-img {
+  width: 150px;
+  height: 150px;
+  background-color: #000;
+  border-radius: 50%;
 }
-.card-coverings__content .item:nth-child(2) {
-  grid-row: span 8;
-  background: center/cover no-repeat url("../images/GRID/2.jpg");
+.card-clients .card-client .client-img__one {
+  background: center/cover no-repeat url(../images/GRID/1.jpg);
 }
-.card-coverings__content .item:nth-child(3) {
-  grid-row: span 10;
-  background: center/cover no-repeat url("../images/GRID/3.jpg");
+.card-clients .card-client .client-img__two {
+  background: center/cover no-repeat url(../images/GRID/2.jpg);
 }
-.card-coverings__content .item:nth-child(4) {
-  grid-row: span 6;
-  background: center/cover no-repeat url("../images/GRID/4.jpg");
+.card-clients .card-client .client-img__three {
+  background: center/cover no-repeat url(../images/GRID/3.jpg);
 }
-.card-coverings__content .item:nth-child(5) {
-  grid-row: span 5;
-  background: center/cover no-repeat url("../images/GRID/5.jpg");
+.card-clients .card-client .client-img__four {
+  background: center/cover no-repeat url(../images/GRID/4.jpg);
 }
-.card-coverings__content .item:nth-child(6) {
-  grid-row: span 11;
-  background: center/cover no-repeat url("../images/GRID/6.jpg");
+.card-clients .card-client .client-img__five {
+  background: center/cover no-repeat url(../images/GRID/6.jpg);
+}
+.card-clients .card-client .client-img__overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.35s;
+  transform: translate(-50%, -50%);
+}
+.card-clients .card-client .client-img__overlay h2 {
+  font-weight: bold;
+  font-size: 32px;
+}
+.card-clients .card-client .client-img__overlay > * {
+  transform: translateY(150px);
+  transition: transform 0.35s;
+}
+.card-clients .card-client .client-img__overlay:hover {
+  opacity: 1;
+}
+.card-clients .card-client .client-img__overlay:hover > * {
+  transform: translateY(0);
+  transition: transform 0.35s;
 }
 
 .footer {
@@ -243,6 +283,94 @@ a {
 }
 .footer__contact-details a {
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu > ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card-banner {
+    height: 80vh;
+  }
+  .card-banner .card-banner__grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-banner .card-banner__grid .items {
+    text-align: center;
+  }
+  .card-banner .card-banner__grid .items.items__grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-banner .card-banner__grid .items.bgc__1 {
+    display: none;
+  }
+  .card-banner .card-banner__grid .items.bgc__2 {
+    display: none;
+  }
+
+  .card-sponsors {
+    margin-bottom: 5rem;
+  }
+  .card-sponsors .card-sponsors__content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .card-clients {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .card-clients__content {
+    width: 80%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+  .card-clients__content .card-client {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .card-clients__content .card-client .client-img {
+    width: 200px;
+    height: 200px;
+  }
+  .card-clients__content .card-client .client-img__overlay {
+    width: 200px;
+    height: 200px;
+  }
+
+  .footer {
+    padding: 5rem 10%;
+  }
+  .footer .footer__contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+  .footer .footer__contact-title {
+    grid-column: 1/3;
+    width: 100%;
+  }
+  .footer .footer__contact-address {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .footer .footer__contact-details {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=sponsor.css.map */
