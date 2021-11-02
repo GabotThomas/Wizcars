@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
+  <script src="https://kit.fontawesome.com/dee8f46d71.js" crossorigin="anonymous"></script>
+  <title>Wizcars</title>
+</head>
+<body class="contact">
+    <header class="header">
+        <section class="header__navbar">
+          <h1 class="header__title">Wizcars</h1>
+          <nav class="header__menu">
+            <ul>
+              <li><a href="./index.html">Accueil</a></li>
+              <li><a href="#Apropos">Notre service</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </section>
+      </header>
+    <main>
+      <section class="card-contact container">
+        <h1>Trouver votre wizcars proche de chez vous</h1>
+        <section class="card-contact__map">
+          <img src="./images/map.png" alt="">
+          <section class="card-contact__form">
+            <form class="form-search" action="GET">
+              <input class="form-search__input" type="text" name="address" id="address" placeholder="Entrer votre adresse">
+            </form>
+            <section class="form-search__list-result">
+              <section class="form-search__result">
+                <span class="contact-result__resume">Paris 75011</span>
+              </section>
+              <section class="form-search__result open">
+                <span class="contact-result__resume">Paris 75008</span>
+                  <section class="contact-result__grid">
+                    <div class="grid-title">Addresse:</div>
+                    <div class="grid-address">Paris 75008, 136 Av. des Champs-Élysées</div>
+                    <div class="grid-title">Téléphone:</div>
+                    <div class="grid-phone">09 54 68 75 42</div>
+                    <div class="grid-title">Horaires:</div>
+                    <div class="grid-hours">
+                      <div class="grid-hours__date">Lundi:</div>
+                      <div class="grid-hours__hours end">8h00</div>
+                      <div class="grid-hours__middle">-</div>
+                      <div class="grid-hours__hours">18h30</div>
+                      <div class="grid-hours__date">Mardi:</div>
+                      <div class="grid-hours__hours end">8h00</div>
+                      <div class="grid-hours__middle">-</div>
+                      <div class="grid-hours__hours">18h30</div>
+                      <div class="grid-hours__date">...</div>
+                    </div>
+                  </section>
+              </section>
+              <section class="form-search__result">
+                <span class="contact-result__resume">Paris 75012</span>
+              </section>
+              <section class="form-search__result">
+                <span class="contact-result__resume">Paris 75015</span>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+    </main>
+</body>
