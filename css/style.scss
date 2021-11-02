@@ -39,6 +39,9 @@ a {
   text-decoration: none;
   color: black;
 }
+input {
+  outline: 0;
+}
 
 //bibliotheque
 .container {
@@ -50,10 +53,6 @@ a {
   &__navbar {
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.75);
-    position: fixed;
-    top: 1;
-    top: 0;
-    left: 0;
     width: 100%;
     z-index: 100;
   }
@@ -84,6 +83,12 @@ a {
   .header {
     background: center / cover no-repeat url("../images/banner.png");
     height: 100vh;
+    &__navbar {
+      position: fixed;
+      top: 1;
+      top: 0;
+      left: 0;
+    }
   }
 
   .card-banner {
@@ -291,6 +296,101 @@ a {
         align-items: flex-end;
         a {
           color: white;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  .card-contact {
+    margin-top: 3rem;
+    h1 {
+      text-align: center;
+    }
+    &__map {
+      display: flex;
+      margin-top: 3rem;
+      justify-content: center;
+      align-items: start;
+      img {
+        width: 40%;
+        margin-right: 1rem;
+      }
+    }
+    &__form {
+      width: 40%;
+      .form-search {
+        width: 100%;
+        &__input {
+          padding: 1rem 2rem;
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          border-radius: 1rem;
+          width: 100%;
+          -webkit-transition: color 0.1s ease, border-color 0.1s ease;
+          transition: color 0.1s ease, border-color 0.1s ease;
+          border: 1px solid rgba(34, 36, 38, 0.15);
+          color: rgba(0, 0, 0, 0.87);
+          &:focus {
+            color: rgba(0, 0, 0, 0.95);
+            border-color: #85b7d9;
+          }
+          &::placeholder {
+            color: rgba(34, 36, 38, 0.37);
+          }
+        }
+      }
+      .form-search__list-result {
+        .form-search__result {
+          border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+          display: flex;
+          flex-direction: column;
+          padding: 1rem;
+        }
+        .contact-result__resume {
+          margin: 0.7rem 0;
+          position: relative;
+          &::after {
+            font-family: "FontAwesome";
+            content: "\f107";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        .open .contact-result__resume::after {
+          content: "\f106";
+        }
+        .contact-result__grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1.5rem;
+          max-width: 450px;
+          * {
+            font-size: 1.4rem;
+          }
+          .grid-title {
+            font-weight: 600;
+          }
+          .grid-hours {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            .grid-hours__middle {
+              text-align: center;
+            }
+            .grid-hours__hours.end {
+              text-align: end;
+            }
+            .grid-hours__date {
+              font-weight: 500;
+            }
+          }
         }
       }
     }
