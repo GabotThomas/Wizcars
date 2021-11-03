@@ -268,35 +268,35 @@ input {
       }
     }
   }
-  .footer {
-    background-color: black;
-    padding: 10rem 10%;
-    margin-top: 5rem;
-    &__contact {
+}
+.footer {
+  background-color: black;
+  padding: 10rem 10%;
+  margin-top: 5rem;
+  &__contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-address {
+      color: white;
+      width: 33%;
+    }
+    &-title {
+      color: white;
+      width: 33%;
+      text-align: center;
+      font-size: 2em;
+      font-weight: 200;
+      font-style: normal;
+      letter-spacing: 0.35em;
+    }
+    &-details {
+      width: 33%;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      &-address {
+      flex-direction: column;
+      align-items: flex-end;
+      a {
         color: white;
-        width: 33%;
-      }
-      &-title {
-        color: white;
-        width: 33%;
-        text-align: center;
-        font-size: 2em;
-        font-weight: 200;
-        font-style: normal;
-        letter-spacing: 0.35em;
-      }
-      &-details {
-        width: 33%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        a {
-          color: white;
-        }
       }
     }
   }
@@ -401,7 +401,6 @@ input {
 
 @media only screen and (max-width: 1224px) {
   /* Styles */
-
   .container {
     width: calc(100% - 6rem);
     margin: 0 3rem;
@@ -413,6 +412,8 @@ input {
   .container {
     height: auto;
   }
+
+  //homePage
   .homepage .card-banner h1 {
     text-align: center;
   }
@@ -427,10 +428,20 @@ input {
       min-height: 300px;
     }
   }
-  .homepage .footer {
+
+  //contact
+  .contact .card-contact__map img {
+    width: 50%;
+  }
+  .contact .card-contact__form {
+    width: 50%;
+  }
+
+  //footer
+  .footer {
     padding: 5rem 10%;
   }
-  .homepage .footer__contact {
+  .footer__contact {
     flex-wrap: wrap;
     &-title {
       width: 100%;
@@ -445,10 +456,7 @@ input {
 }
 
 @media only screen and (max-width: 768px) {
-  .card-packs__list {
-    flex-wrap: wrap;
-  }
-
+  //homepage
   .homepage .card-banner__grid .item {
     border: 0.5rem solid white;
     &.bcw {
@@ -465,8 +473,24 @@ input {
       min-height: 300px;
     }
   }
+  .homepage .card-packs__list {
+    flex-wrap: wrap;
+  }
 
-  .homepage .footer__contact {
+  //contact
+  .contact .card-contact__map {
+    flex-wrap: wrap;
+  }
+  .contact .card-contact__map img {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+  .contact .card-contact__form {
+    width: 100%;
+  }
+
+  //footer
+  .footer__contact {
     &-title {
       margin-bottom: 2rem;
     }

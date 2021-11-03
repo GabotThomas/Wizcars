@@ -264,21 +264,22 @@ input {
   grid-row: span 11;
   background: center/cover no-repeat url("../images/GRID/6.jpg");
 }
-.homepage .footer {
+
+.footer {
   background-color: black;
   padding: 10rem 10%;
   margin-top: 5rem;
 }
-.homepage .footer__contact {
+.footer__contact {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.homepage .footer__contact-address {
+.footer__contact-address {
   color: white;
   width: 33%;
 }
-.homepage .footer__contact-title {
+.footer__contact-title {
   color: white;
   width: 33%;
   text-align: center;
@@ -287,13 +288,13 @@ input {
   font-style: normal;
   letter-spacing: 0.35em;
 }
-.homepage .footer__contact-details {
+.footer__contact-details {
   width: 33%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.homepage .footer__contact-details a {
+.footer__contact-details a {
   color: white;
 }
 
@@ -415,27 +416,31 @@ input {
     min-height: 300px;
   }
 
-  .homepage .footer {
+  .contact .card-contact__map img {
+    width: 50%;
+  }
+
+  .contact .card-contact__form {
+    width: 50%;
+  }
+
+  .footer {
     padding: 5rem 10%;
   }
 
-  .homepage .footer__contact {
+  .footer__contact {
     flex-wrap: wrap;
   }
-  .homepage .footer__contact-title {
+  .footer__contact-title {
     width: 100%;
     order: -1;
     margin-bottom: 3rem;
   }
-  .homepage .footer__contact-address, .homepage .footer__contact-details {
+  .footer__contact-address, .footer__contact-details {
     width: 50%;
   }
 }
 @media only screen and (max-width: 768px) {
-  .card-packs__list {
-    flex-wrap: wrap;
-  }
-
   .homepage .card-banner__grid .item {
     border: 0.5rem solid white;
   }
@@ -452,10 +457,27 @@ input {
     min-height: 300px;
   }
 
-  .homepage .footer__contact-title {
+  .homepage .card-packs__list {
+    flex-wrap: wrap;
+  }
+
+  .contact .card-contact__map {
+    flex-wrap: wrap;
+  }
+
+  .contact .card-contact__map img {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+
+  .contact .card-contact__form {
+    width: 100%;
+  }
+
+  .footer__contact-title {
     margin-bottom: 2rem;
   }
-  .homepage .footer__contact-address, .homepage .footer__contact-details {
+  .footer__contact-address, .footer__contact-details {
     width: 100%;
     text-align: center;
     align-items: center;
