@@ -630,7 +630,7 @@ textarea::placeholder {
   display: flex;
 }
 .service .car1-1 {
-  background-image: url("/images/blackcar.jpg");
+  background-image: url("../images/blackcar.jpg");
   background-repeat: no-repeat;
   /* Do not repeat the image */
   background-size: cover;
@@ -887,16 +887,10 @@ textarea::placeholder {
   }
 
   .service .car1-1 {
-    background-image: url("/images/blackcar.jpg");
-    background-repeat: no-repeat;
     background-position: center;
     /* Do not repeat the image */
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
   }
   .service .car1-1 > h1 {
-    color: white;
     padding: 6rem;
   }
   .service .roue {
