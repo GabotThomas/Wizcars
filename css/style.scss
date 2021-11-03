@@ -59,7 +59,7 @@ textarea {
   }
 }
 
-//bibliotheque
+/*bibliotheque */
 .container {
   width: 80%;
   margin: 0 auto;
@@ -67,6 +67,7 @@ textarea {
     height: 100vh;
   }
 }
+//header
 .header {
   position: sticky;
   top: 0;
@@ -98,9 +99,43 @@ textarea {
     }
   }
 }
+//footer
+.footer {
+  background-color: black;
+  padding: 10rem 10%;
+  margin-top: 5rem;
+  &__contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-address {
+      color: white;
+      width: 33%;
+    }
+    &-title {
+      color: white;
+      width: 33%;
+      text-align: center;
+      font-size: 2em;
+      font-weight: 200;
+      font-style: normal;
+      letter-spacing: 0.35em;
+    }
+    &-details {
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      a {
+        color: white;
+      }
+    }
+  }
+}
 
-//custom
+/*custom*/
 
+//homepage
 .homepage {
   .header {
     background: center / cover no-repeat url("../images/banner.png");
@@ -292,6 +327,8 @@ textarea {
     }
   }
 }
+
+//contact
 .contact {
   .card-contact {
     margin-top: 3rem;
@@ -388,6 +425,8 @@ textarea {
     }
   }
 }
+
+//informations
 .informations {
   .card-banner {
     height: 100vh;
@@ -583,43 +622,186 @@ textarea {
     }
   }
 }
-.footer {
-  background-color: black;
-  padding: 10rem 10%;
-  margin-top: 5rem;
-  &__contact {
+
+//service
+.service {
+  .footer {
+    margin-top: 0;
+  }
+  .menu-button {
+    transition: fill 500ms;
+  }
+
+  .outer-circle {
+    transform-origin: 60px 60px;
+    transition: transform 2s cubic-bezier(0.62, 0.005, 0, 1.005);
+  }
+
+  .button {
+    max-width: 15rem;
+    width: auto;
+    background: none;
+    border: 0 none;
+    font-size: 0;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+
+    &:hover {
+      .menu-button {
+        fill: red;
+      }
+
+      .outer-circle {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  #car2 {
     display: flex;
-    justify-content: space-between;
+  }
+  .car1-1 {
+    background-image: url("/images/blackcar.jpg");
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+    > h1 {
+      color: white;
+      padding: 20rem;
+    }
+  }
+
+  // PIMP MY SPYDER
+  .roue {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    &-address {
-      color: white;
-      width: 33%;
+    gap: 1rem;
+  }
+  .custom {
+    svg {
+      animation: bounce 0.6s ease infinite alternate;
+      max-width: 20rem;
+      max-height: 20rem;
     }
-    &-title {
+  }
+  @keyframes bounce {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-70px);
+    }
+  }
+  .cardcustom {
+    background-color: black;
+    border-radius: 30px;
+    box-shadow: 0 0 80px #ccc;
+    margin: 0 auto 3rem;
+    p {
       color: white;
-      width: 33%;
+      padding: 2rem;
+      padding-bottom: 5rem;
       text-align: center;
-      font-size: 2em;
-      font-weight: 200;
-      font-style: normal;
-      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      font-weight: bold;
     }
-    &-details {
-      width: 33%;
+    .custom {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      a {
-        color: white;
+      flex: row;
+      justify-content: center;
+      position: relative;
+      padding-left: calc(2rem + 50px);
+      &__carcolor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        left: 2rem;
+        .button-red {
+          padding: 20px 20px;
+          margin: 3px 4px;
+          display: inline-block;
+          cursor: pointer;
+          background: #e91e63;
+          background: linear-gradient(top, #e91e63 0%, #d0054a 100%);
+          background: -moz-linear-gradient(top, #e91e63 0%, #d0054a 100%);
+          background: -webkit-linear-gradient(top, #e91e63 0%, #d0054a 100%);
+          border: 1px solid #e81e65;
+          border-radius: 0px;
+          -moz-border-radius: 0px;
+          -webkit-border-radius: 0px;
+          box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+          -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+          -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+        }
+        .button-red:hover {
+          opacity: 0.8;
+        }
+        .button-blue {
+          padding: 20px 20px;
+          margin: 3px 4px;
+          display: inline-block;
+          cursor: pointer;
+          background: #03a9f4;
+          background: linear-gradient(top, #03a9f4 0%, #0090db 100%);
+          background: -moz-linear-gradient(top, #03a9f4 0%, #0090db 100%);
+          background: -webkit-linear-gradient(top, #03a9f4 0%, #0090db 100%);
+          border: 1px solid #03a9f4;
+          border-radius: 0px;
+          -moz-border-radius: 0px;
+          -webkit-border-radius: 0px;
+          box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+          -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+          -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+        }
+        .button-blue:hover {
+          opacity: 0.8;
+        }
+        .button-green {
+          padding: 20px 20px;
+          margin: 3px 4px;
+          display: inline-block;
+          cursor: pointer;
+          background: #4caf50;
+          background: linear-gradient(top, #4caf50 0%, #339637 100%);
+          background: -moz-linear-gradient(top, #4caf50 0%, #339637 100%);
+          background: -webkit-linear-gradient(top, #4caf50 0%, #339637 100%);
+          border: 1px solid #4caf50;
+          border-radius: 0px;
+          -moz-border-radius: 0px;
+          -webkit-border-radius: 0px;
+          box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+          -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+          -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+        }
+        .button-green:hover {
+          opacity: 0.8;
+        }
+      }
+      &__spyder {
       }
     }
   }
 }
 
-// CODE TEST
-
 @media only screen and (max-width: 1224px) {
-  /* Styles */
   .container {
     width: calc(100% - 6rem);
     margin: 0 3rem;
@@ -627,7 +809,6 @@ textarea {
 }
 
 @media only screen and (max-width: 1024px) {
-  /* Styles */
   .container {
     height: auto !important;
   }
@@ -707,6 +888,8 @@ textarea {
   .contact .card-contact__form {
     width: 100%;
   }
+
+  //informations
   .informations {
     .card-banner {
       height: 80vh;
@@ -770,6 +953,27 @@ textarea {
           }
         }
       }
+    }
+  }
+
+  //service
+  .service {
+    .car1-1 {
+      background-image: url("/images/blackcar.jpg");
+      background-repeat: no-repeat;
+      background-position: center; /* Do not repeat the image */
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+
+      > h1 {
+        color: white;
+        padding: 6rem;
+      }
+    }
+    .roue {
+      font-size: 1rem;
+      gap: 0rem;
     }
   }
 

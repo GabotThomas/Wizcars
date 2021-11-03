@@ -10,20 +10,22 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./css/service.css" type="text/css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <title>Informations</title>
   </head>
-  <body>
+  <body class="service">
     <header class="header">
-      <h1 class="header__title">Wizcars</h1>
-      <nav class="header__menu">
-        <ul>
-          <li><a href="./index.html">Accueil</a></li>
-          <li><a href="#service">Notre service</a></li>
-          <li><a href="./sponsor.html">Informations</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <section class="header__navbar">
+        <h1 class="header__title">Wizcars</h1>
+        <nav class="header__menu">
+          <ul>
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="#service">Notre service</a></li>
+            <li><a href="./sponsor.html">Informations</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
     </header>
     <main>
       <div class="roue">
@@ -20885,55 +20887,7 @@
             </div>
           </div>
         </div>
-        <script>
-          function CustomizeB() {
-            var b1 = document.getElementById("spyder1");
-            var b2 = document.getElementById("spyder2");
-            var b3 = document.getElementById("spyder3");
-            b1.style.display = "none";
-            b3.style.display = "none";
-            if (b2.style.display === "none") {
-              b2.style.display = "block";
-            }
-          }
-          function CustomizeR() {
-            var b1 = document.getElementById("spyder1");
-            var b2 = document.getElementById("spyder2");
-            var b3 = document.getElementById("spyder3");
-            b2.style.display = "none";
-            b3.style.display = "none";
-            if (b1.style.display === "none") {
-              b1.style.display = "block";
-            }
-          }
-          function CustomizeG() {
-            var b1 = document.getElementById("spyder1");
-            var b2 = document.getElementById("spyder2");
-            var b3 = document.getElementById("spyder3");
-            b1.style.display = "none";
-            b2.style.display = "none";
-            if (b3.style.display === "none") {
-              b3.style.display = "block";
-            }
-          }
-        </script>
       </div>
-      <script>
-        function Wheels() {
-          var div = document.getElementById("car1");
-          var div2 = document.getElementById("car2");
-          if (div.style.display === "none") {
-            div2.style.display = "none";
-          } else {
-            div2.style.display = "block";
-          }
-          if (div.style.display === "none") {
-            div.style.display = "block";
-          } else {
-            div.style.display = "none";
-          }
-        }
-      </script>
     </main>
     <footer class="footer">
       <address class="footer__contact">
@@ -20954,5 +20908,51 @@
         </section>
       </address>
     </footer>
+    <script>
+      function Wheels() {
+        var div = document.getElementById("car1");
+        var div2 = document.getElementById("car2");
+        if (div.style.display === "none") {
+          div2.style.display = "none";
+        } else {
+          div2.style.display = "flex";
+        }
+        if (div.style.display === "none") {
+          div.style.display = "block";
+        } else {
+          div.style.display = "none";
+        }
+      }
+      function CustomizeB() {
+          var b1 = document.getElementById("spyder1");
+          var b2 = document.getElementById("spyder2");
+          var b3 = document.getElementById("spyder3");
+          b1.style.display = "none";
+          b3.style.display = "none";
+          if (b2.style.display === "none") {
+            b2.style.display = "block";
+          }
+        }
+      function CustomizeR() {
+          var b1 = document.getElementById("spyder1");
+          var b2 = document.getElementById("spyder2");
+          var b3 = document.getElementById("spyder3");
+          b2.style.display = "none";
+          b3.style.display = "none";
+          if (b1.style.display === "none") {
+            b1.style.display = "block";
+          }
+        }
+        function CustomizeG() {
+          var b1 = document.getElementById("spyder1");
+          var b2 = document.getElementById("spyder2");
+          var b3 = document.getElementById("spyder3");
+          b1.style.display = "none";
+          b2.style.display = "none";
+          if (b3.style.display === "none") {
+            b3.style.display = "block";
+          }
+        }
+    </script>
   </body>
 </html>
