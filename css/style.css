@@ -290,56 +290,26 @@ textarea::placeholder {
   grid-row: span 11;
   background: center/cover no-repeat url("../images/GRID/6.jpg");
 }
-.homepage .footer {
-  background-color: black;
-  padding: 10rem 10%;
-  margin-top: 5rem;
-}
-.homepage .footer__contact {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.homepage .footer__contact-address {
-  color: white;
-  width: 33%;
-}
-.homepage .footer__contact-title {
-  color: white;
-  width: 33%;
-  text-align: center;
-  font-size: 2em;
-  font-weight: 200;
-  font-style: normal;
-  letter-spacing: 0.35em;
-}
-.homepage .footer__contact-details {
-  width: 33%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.homepage .footer__contact-details a {
-  color: white;
-}
 
-.contact .header {
-  position: sticky;
-  top: 0;
-  left: 0;
-}
 .contact .card-contact {
   margin-top: 3rem;
   width: 100vw;
 }
-.contact .card-contact h1 {
+.contact .card-contact h1,
+.contact .card-contact h2 {
   text-align: center;
+}
+.contact .card-contact .card-contact-title {
+  width: 100%;
+  margin-bottom: 3rem;
 }
 .contact .card-contact__map {
   display: flex;
   margin-top: 3rem;
   justify-content: center;
   align-items: start;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 .contact .card-contact__map img {
   width: 40%;
@@ -351,23 +321,6 @@ textarea::placeholder {
 .contact .card-contact__form .form-search {
   width: 100%;
 }
-.contact .card-contact__form .form-search__input {
-  padding: 1rem 2rem;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  border-radius: 1rem;
-  width: 100%;
-  -webkit-transition: color 0.1s ease, border-color 0.1s ease;
-  transition: color 0.1s ease, border-color 0.1s ease;
-  border: 1px solid rgba(34, 36, 38, 0.15);
-  color: rgba(0, 0, 0, 0.87);
-}
-.contact .card-contact__form .form-search__input:focus {
-  color: rgba(0, 0, 0, 0.95);
-  border-color: #85b7d9;
-}
-.contact .card-contact__form .form-search__input::placeholder {
-  color: rgba(34, 36, 38, 0.37);
-}
 .contact .card-contact__form .form-search__list-result .form-search__result {
   border-bottom: 1px solid rgba(34, 36, 38, 0.15);
   display: flex;
@@ -378,10 +331,7 @@ textarea::placeholder {
   margin: 0.7rem 0;
   position: relative;
 }
-.contact
-  .card-contact__form
-  .form-search__list-result
-  .contact-result__resume::after {
+.contact .card-contact__form .form-search__list-result .contact-result__resume::after {
   font-family: "FontAwesome";
   content: "\f107";
   position: absolute;
@@ -389,11 +339,7 @@ textarea::placeholder {
   top: 50%;
   transform: translateY(-50%);
 }
-.contact
-  .card-contact__form
-  .form-search__list-result
-  .open
-  .contact-result__resume::after {
+.contact .card-contact__form .form-search__list-result .open .contact-result__resume::after {
   content: "\f106";
 }
 .contact .card-contact__form .form-search__list-result .contact-result__grid {
@@ -405,43 +351,20 @@ textarea::placeholder {
 .contact .card-contact__form .form-search__list-result .contact-result__grid * {
   font-size: 1.4rem;
 }
-.contact
-  .card-contact__form
-  .form-search__list-result
-  .contact-result__grid
-  .grid-title {
+.contact .card-contact__form .form-search__list-result .contact-result__grid .grid-title {
   font-weight: 600;
 }
-.contact
-  .card-contact__form
-  .form-search__list-result
-  .contact-result__grid
-  .grid-hours {
+.contact .card-contact__form .form-search__list-result .contact-result__grid .grid-hours {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-.contact
-  .card-contact__form
-  .form-search__list-result
-  .contact-result__grid
-  .grid-hours
-  .grid-hours__middle {
+.contact .card-contact__form .form-search__list-result .contact-result__grid .grid-hours .grid-hours__middle {
   text-align: center;
 }
-.contact
-  .card-contact__form
-  .form-search__list-result
-  .contact-result__grid
-  .grid-hours
-  .grid-hours__hours.end {
+.contact .card-contact__form .form-search__list-result .contact-result__grid .grid-hours .grid-hours__hours.end {
   text-align: end;
 }
-.contact
-  .card-contact__form
-  .form-search__list-result
-  .contact-result__grid
-  .grid-hours
-  .grid-hours__date {
+.contact .card-contact__form .form-search__list-result .contact-result__grid .grid-hours .grid-hours__date {
   font-weight: 500;
 }
 .contact .card-contact__mail {
@@ -681,23 +604,141 @@ textarea::placeholder {
 }
 @media only screen and (max-width: 1024px) {
   /* Styles */
-  .card-coverings__content {
+  .container {
+    height: auto !important;
+  }
+
+  .homepage .card-banner h1 {
+    text-align: center;
+  }
+
+  .homepage .card-coverings__content {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(24, 1fr);
     grid-auto-flow: row;
   }
-
-  .card-coverings .card-coverings__content .item {
+  .homepage .card-coverings .card-coverings__content .item {
     grid-row: span 8;
     min-height: 300px;
   }
 
-  .container {
-    height: auto;
+  .contact .card-contact__map img {
+    width: 50%;
+  }
+
+  .contact .card-contact__form {
+    width: 50%;
+  }
+
+  .footer {
+    padding: 5rem 10%;
+  }
+
+  .footer__contact {
+    flex-wrap: wrap;
+  }
+  .footer__contact-title {
+    width: 100%;
+    order: -1;
+    margin-bottom: 3rem;
+  }
+  .footer__contact-address, .footer__contact-details {
+    width: 50%;
   }
 }
 @media only screen and (max-width: 768px) {
-  .card-packs__list {
+  .homepage .card-banner__grid .item {
+    border: 0.5rem solid white;
+  }
+  .homepage .card-banner__grid .item.bcw {
+    background-color: transparent;
+  }
+
+  .homepage .card-coverings__content {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+  .homepage .card-coverings .card-coverings__content .item {
+    grid-row: span 4;
+    min-height: 300px;
+  }
+
+  .homepage .card-packs__list {
     flex-wrap: wrap;
+  }
+
+  .contact .card-contact__map {
+    flex-wrap: wrap;
+  }
+
+  .contact .card-contact__map img {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+
+  .contact .card-contact__form {
+    width: 100%;
+  }
+
+  .informations .card-banner {
+    height: 80vh;
+  }
+  .informations .card-banner .card-banner__grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .informations .card-banner .card-banner__grid .items {
+    text-align: center;
+  }
+  .informations .card-banner .card-banner__grid .items.items__grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .informations .card-banner .card-banner__grid .items.bgc__1 {
+    display: none;
+  }
+  .informations .card-banner .card-banner__grid .items.bgc__2 {
+    display: none;
+  }
+  .informations .card-sponsors {
+    margin-bottom: 5rem;
+  }
+  .informations .card-sponsors .card-sponsors__content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .informations .card-clients {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .informations .card-clients__content {
+    width: 80%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+  .informations .card-clients__content .card-client {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .informations .card-clients__content .card-client .client-img {
+    width: 200px;
+    height: 200px;
+  }
+  .informations .card-clients__content .card-client .client-img__overlay {
+    width: 200px;
+    height: 200px;
+  }
+
+  .footer__contact-title {
+    margin-bottom: 2rem;
+  }
+  .footer__contact-address, .footer__contact-details {
+    width: 100%;
+    text-align: center;
+    align-items: center;
   }
 }
