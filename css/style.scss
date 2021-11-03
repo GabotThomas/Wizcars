@@ -644,10 +644,18 @@ textarea {
     border: 0 none;
     font-size: 0;
     cursor: pointer;
+    position: relative;
 
     svg {
       width: 100%;
       height: auto;
+    }
+    .jante {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
     }
 
     &:hover {

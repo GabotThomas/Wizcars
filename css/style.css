@@ -615,10 +615,18 @@ textarea::placeholder {
   border: 0 none;
   font-size: 0;
   cursor: pointer;
+  position: relative;
 }
 .service .button svg {
   width: 100%;
   height: auto;
+}
+.service .button .jante {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
 }
 .service .button:hover .menu-button {
   fill: red;
