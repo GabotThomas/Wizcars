@@ -22,11 +22,11 @@
             </ul>
           </nav>
         </section>
-      </header>
+    </header>
     <main>
-      <section class="card-contact container">
-        <h1>Trouver votre wizcars proche de chez vous</h1>
-        <section class="card-contact__map">
+      <section class="card-contact ">
+        <section class="card-contact__map container">
+          <h1 class="card-contact-title">Trouver votre wizcars proche de chez vous</h1>
           <img src="./images/map.png" alt="">
           <section class="card-contact__form">
             <form class="form-search" action="GET">
@@ -66,6 +66,34 @@
             </section>
           </section>
         </section>
+        
+        <section class="card-contact__mail container">
+          <h2 class="card-contact-title">Contactez les</h2>
+          <form class="form-mail" action="GET">
+            <input class="form-mail__nom form" type="text" name="name" id="name" placeholder="Votre nom">
+            <input class="form-mail__mail form" type="text" name="mail" id="mail" placeholder="Votre email">
+            <textarea class="form-mail__message form" type="text" name="message" id="message" placeholder="Votre message" rows="5" cols="100"></textarea>
+          </form>
+        </section>
       </section>
     </main>
+    <footer class="footer">
+      <address class="footer__contact">
+        <section class="footer__contact-address">
+          136 Av. des Champs-Élysées <br />
+          75008 Paris
+        </section>
+        <span class="footer__contact-title">Wizcars</span>
+        <section class="footer__contact-details">
+          <a
+            class="footer__contact-mail"
+            href="mailto:contact@wizcars-france.fr"
+            >contact@wizcars-france.fr</a
+          >
+          <a class="footer__contact-phone" href="tel:+0950645879"
+            >09 50 64 58 79</a
+          >
+        </section>
+      </address>
+    </footer>
 </body>
