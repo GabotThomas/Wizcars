@@ -77,6 +77,7 @@ textarea::placeholder {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 100;
 }
 .header__navbar {
   padding: 1rem;
