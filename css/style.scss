@@ -39,17 +39,38 @@ a {
   text-decoration: none;
   color: black;
 }
-input {
+input,
+textarea {
   outline: 0;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 1rem;
+  width: 100%;
+  -webkit-transition: color 0.1s ease, border-color 0.1s ease;
+  transition: color 0.1s ease, border-color 0.1s ease;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  color: rgba(0, 0, 0, 0.87);
+  &:focus {
+    color: rgba(0, 0, 0, 0.95);
+    border-color: #85b7d9;
+  }
+  &::placeholder {
+    color: rgba(34, 36, 38, 0.37);
+  }
 }
 
 //bibliotheque
 .container {
-  height: 100vh;
   width: 80%;
   margin: 0 auto;
+  &.vh {
+    height: 100vh;
+  }
 }
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
   &__navbar {
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.75);
@@ -83,6 +104,7 @@ input {
   .header {
     background: center / cover no-repeat url("../images/banner.png");
     height: 100vh;
+    position: relative;
     &__navbar {
       position: fixed;
       top: 1;
@@ -303,24 +325,28 @@ input {
 }
 
 .contact {
-  .header {
-    position: sticky;
-    top: 0;
-    left: 0;
-  }
   .card-contact {
     margin-top: 3rem;
-    h1 {
+    width: 100vw;
+    h1,
+    h2 {
       text-align: center;
+    }
+    .card-contact-title {
+      width: 100%;
+      margin-bottom: 3rem;
     }
     &__map {
       display: flex;
       margin-top: 3rem;
       justify-content: center;
       align-items: start;
+      flex-wrap: wrap;
+      align-content: flex-start;
+
       img {
         width: 40%;
-        margin-right: 1rem;
+        padding-right: 1rem;
       }
     }
     &__form {
@@ -328,21 +354,6 @@ input {
       .form-search {
         width: 100%;
         &__input {
-          padding: 1rem 2rem;
-          border: 1px solid rgba(0, 0, 0, 0.8);
-          border-radius: 1rem;
-          width: 100%;
-          -webkit-transition: color 0.1s ease, border-color 0.1s ease;
-          transition: color 0.1s ease, border-color 0.1s ease;
-          border: 1px solid rgba(34, 36, 38, 0.15);
-          color: rgba(0, 0, 0, 0.87);
-          &:focus {
-            color: rgba(0, 0, 0, 0.95);
-            border-color: #85b7d9;
-          }
-          &::placeholder {
-            color: rgba(34, 36, 38, 0.37);
-          }
         }
       }
       .form-search__list-result {
@@ -394,6 +405,19 @@ input {
         }
       }
     }
+    &__mail {
+      max-width: 60rem;
+      margin: 6rem auto 0;
+      .form {
+        margin-bottom: 1rem;
+      }
+      textarea {
+        max-height: 500px;
+        min-height: 100px;
+        max-width: 100%;
+        min-width: 100%;
+      }
+    }
   }
 }
 
@@ -410,7 +434,7 @@ input {
 @media only screen and (max-width: 1024px) {
   /* Styles */
   .container {
-    height: auto;
+    height: auto !important;
   }
 
   //homePage
