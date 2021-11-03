@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*PX => REM 16px*62.5%*/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  font: 1.6rem sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
+  margin: 0;
+  font-weight: lighter;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  background: #000;
+  height: 200px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.header__title {
+  font-size: 2em;
+  color: white;
+  line-height: 1.5em;
+  letter-spacing: 0.35em;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+}
+
+.header__menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 200;
+}
+
+.header__menu ul li a {
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.menu-button {
+  -webkit-transition: fill 500ms;
+  transition: fill 500ms;
+}
+
+.outer-circle {
+  -webkit-transform-origin: 60px 60px;
+          transform-origin: 60px 60px;
+  -webkit-transition: -webkit-transform 2s cubic-bezier(0.62, 0.005, 0, 1.005);
+  transition: -webkit-transform 2s cubic-bezier(0.62, 0.005, 0, 1.005);
+  transition: transform 2s cubic-bezier(0.62, 0.005, 0, 1.005);
+  transition: transform 2s cubic-bezier(0.62, 0.005, 0, 1.005), -webkit-transform 2s cubic-bezier(0.62, 0.005, 0, 1.005);
+}
+
+.button {
+  max-width: 15rem;
+  width: auto;
+  background: none;
+  border: 0 none;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.button svg {
+  width: 100%;
+  height: auto;
+}
+
+.button:hover .menu-button {
+  fill: red;
+}
+
+.button:hover .outer-circle {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.car1-1 {
+  background-image: url("/images/blackcar.jpg");
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.car1-1 > h1 {
+  color: white;
+  padding: 20rem;
+}
+
+.roue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.custom svg {
+  -webkit-animation: bounce 0.6s ease infinite alternate;
+          animation: bounce 0.6s ease infinite alternate;
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+  }
+}
+
+@keyframes bounce {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+  }
+}
+
+.cardcustom {
+  background-color: black;
+  width: 30%;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 80px #ccc;
+          box-shadow: 0 0 80px #ccc;
+  margin: auto;
+}
+
+.cardcustom p {
+  color: white;
+  padding: 2rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.cardcustom .custom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: row;
+      -ms-flex: row;
+          flex: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5rem;
+}
+
+.cardcustom .custom__carcolor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  width: 8%;
+}
+
+.cardcustom .custom__carcolor .button-red {
+  padding: 20px 20px;
+  margin: 3px 4px;
+  display: inline-block;
+  cursor: pointer;
+  background: #e91e63;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e91e63), to(#d0054a));
+  background: linear-gradient(top, #e91e63 0%, #d0054a 100%);
+  background: -webkit-linear-gradient(top, #e91e63 0%, #d0054a 100%);
+  border: 1px solid #e81e65;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.cardcustom .custom__carcolor .button-red:hover {
+  opacity: 0.8;
+}
+
+.cardcustom .custom__carcolor .button-blue {
+  padding: 20px 20px;
+  margin: 3px 4px;
+  display: inline-block;
+  cursor: pointer;
+  background: #03a9f4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#03a9f4), to(#0090db));
+  background: linear-gradient(top, #03a9f4 0%, #0090db 100%);
+  background: -webkit-linear-gradient(top, #03a9f4 0%, #0090db 100%);
+  border: 1px solid #03a9f4;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.cardcustom .custom__carcolor .button-blue:hover {
+  opacity: 0.8;
+}
+
+.cardcustom .custom__carcolor .button-green {
+  padding: 20px 20px;
+  margin: 3px 4px;
+  display: inline-block;
+  cursor: pointer;
+  background: #4caf50;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4caf50), to(#339637));
+  background: linear-gradient(top, #4caf50 0%, #339637 100%);
+  background: -webkit-linear-gradient(top, #4caf50 0%, #339637 100%);
+  border: 1px solid #4caf50;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.cardcustom .custom__carcolor .button-green:hover {
+  opacity: 0.8;
+}
+
+.footer {
+  background-color: black;
+  padding: 10rem 10%;
+  margin-top: 5rem;
+}
+
+.footer__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__contact-address {
+  color: white;
+  width: 33%;
+}
+
+.footer__contact-title {
+  color: white;
+  width: 33%;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 200;
+  font-style: normal;
+  letter-spacing: 0.35em;
+}
+
+.footer__contact-details {
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer__contact-details a {
+  color: white;
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  .footer__contact-title {
+    margin-bottom: 20rem;
+    margin-right: 3rem;
+  }
+  .footer__contact-phone {
+    margin-left: 3rem;
+  }
+  .footer__contact-mail {
+    margin-right: 3rem;
+  }
+  .header__menu > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .car1-1 {
+    background-image: url("/images/blackcar.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Do not repeat the image */
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+  }
+  .car1-1 > h1 {
+    color: white;
+    padding: 6rem;
+  }
+  .roue {
+    font-size: 1rem;
+    gap: 0rem;
+  }
+}
+/*# sourceMappingURL=service.css.map */
