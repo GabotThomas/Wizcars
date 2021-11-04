@@ -164,6 +164,25 @@ textarea::placeholder {
   top: 0;
   left: 0;
 }
+.homepage .header__logo {
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.12;
+}
+.homepage .header__logo path {
+  fill: #fff;
+  stroke: #000;
+}
+.homepage .header__logo:hover {
+  opacity: 1;
+}
+.homepage .header__logo:hover path {
+  fill: #19232f;
+  stroke: #fff;
+}
 .homepage .card-banner {
   display: flex;
   overflow: hidden;
