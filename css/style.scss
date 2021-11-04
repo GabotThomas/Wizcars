@@ -151,7 +151,7 @@ textarea {
 //homepage
 .homepage {
   .header {
-    background: center / cover no-repeat url("../images/banner.png");
+    background: center / cover no-repeat url("../images/banner-original.png");
     height: 100vh;
     position: relative;
     &__navbar {
@@ -174,7 +174,7 @@ textarea {
       padding: 2rem;
     }
     &__grid {
-      background: center / cover no-repeat url("../images/tab.jpg");
+      background: center / cover no-repeat url("../images/tab-original.png");
       display: grid;
       grid-template-columns: 20% 20% 20% 20% 20%;
       grid-template-rows: 20% 20% 20% 20% 20%;
@@ -315,27 +315,27 @@ textarea {
       }
       .item:nth-child(1) {
         grid-row: span 8;
-        background: center / cover no-repeat url("../images/GRID/1.jpg");
+        background: center / cover no-repeat url("../images/GRID/1.png");
       }
       .item:nth-child(2) {
         grid-row: span 8;
-        background: center / cover no-repeat url("../images/GRID/2.jpg");
+        background: center / cover no-repeat url("../images/GRID/2.png");
       }
       .item:nth-child(3) {
         grid-row: span 10;
-        background: center / cover no-repeat url("../images/GRID/3.jpg");
+        background: center / cover no-repeat url("../images/GRID/3.png");
       }
       .item:nth-child(4) {
         grid-row: span 6;
-        background: center / cover no-repeat url("../images/GRID/4.jpg");
+        background: center / cover no-repeat url("../images/GRID/4.png");
       }
       .item:nth-child(5) {
         grid-row: span 5;
-        background: center / cover no-repeat url("../images/GRID/5.jpg");
+        background: center / cover no-repeat url("../images/GRID/5.png");
       }
       .item:nth-child(6) {
         grid-row: span 11;
-        background: center / cover no-repeat url("../images/GRID/6.jpg");
+        background: center / cover no-repeat url("../images/GRID/6.png");
       }
     }
   }
@@ -896,6 +896,23 @@ textarea {
   }
 
   //homepage
+  .homepage {
+    .header {
+      background: center / cover no-repeat url("../images/banner-768.png");
+      height: 100vh;
+      position: relative;
+      &__navbar {
+        position: fixed;
+        top: 1;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  .homepage .card-banner__grid {
+    background: center/cover no-repeat url(../images/tab-768.png);
+  }
   .homepage .card-banner__grid .item {
     border: 0.5rem solid white;
     &.bcw {
@@ -910,6 +927,18 @@ textarea {
     .card-coverings .card-coverings__content .item {
       grid-row: span 4;
       min-height: 300px;
+    }
+    .card-coverings__content .item:nth-child(1) {
+      background: center/cover no-repeat url(../images/GRID/1-768.png);
+    }
+    .card-coverings__content .item:nth-child(2) {
+      background: center/cover no-repeat url(../images/GRID/2-768.png);
+    }
+    .card-coverings__content .item:nth-child(4) {
+      background: center/cover no-repeat url(../images/GRID/4-768.png);
+    }
+    .card-coverings__content .item:nth-child(6) {
+      background: center/cover no-repeat url(../images/GRID/6-768.png);
     }
   }
   .homepage .card-packs__list {
