@@ -1025,7 +1025,7 @@ textarea::placeholder {
     align-items: center;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 435px) {
   .informations .card-banner {
     height: 100%;
   }
