@@ -111,6 +111,37 @@ textarea {
       fill: white;
     }
   }
+  &__menu.open {
+    position: fixed;
+    display: flex;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: white;
+    width: 90%;
+    max-width: 400px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      li {
+        padding: 2rem 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(#000, 0.2);
+        a {
+          color: black;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .open + .header__menu-burger {
+    path {
+      fill: black;
+    }
+  }
 }
 //footer
 .footer {
