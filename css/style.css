@@ -564,19 +564,16 @@ textarea::placeholder {
   border-radius: 50%;
 }
 .informations .card-clients .card-client .client-img__one {
-  background: center/cover no-repeat url(../images/GRID/1.jpg);
+  background: center/cover no-repeat url(../images/GRID/1.png);
 }
 .informations .card-clients .card-client .client-img__two {
-  background: center/cover no-repeat url(../images/GRID/2.jpg);
+  background: center/cover no-repeat url(../images/GRID/2.png);
 }
 .informations .card-clients .card-client .client-img__three {
-  background: center/cover no-repeat url(../images/GRID/3.jpg);
+  background: center/cover no-repeat url(../images/GRID/3.png);
 }
 .informations .card-clients .card-client .client-img__four {
-  background: center/cover no-repeat url(../images/GRID/4.jpg);
-}
-.informations .card-clients .card-client .client-img__five {
-  background: center/cover no-repeat url(../images/GRID/6.jpg);
+  background: center/cover no-repeat url(../images/GRID/4.png);
 }
 .informations .card-clients .card-client .client-img__overlay {
   position: absolute;
@@ -944,6 +941,15 @@ textarea::placeholder {
   .informations .card-clients__content .card-client .client-img {
     width: 200px;
     height: 200px;
+  }
+  .informations .card-clients__content .card-client .client-img__one {
+    background: center/cover no-repeat url(../images/GRID/1-768.png);
+  }
+  .informations .card-clients__content .card-client .client-img__two {
+    background: center/cover no-repeat url(../images/GRID/2-768.png);
+  }
+  .informations .card-clients__content .card-client .client-img__four {
+    background: center/cover no-repeat url(../images/GRID/4-768.png);
   }
   .informations .card-clients__content .card-client .client-img__overlay {
     width: 200px;

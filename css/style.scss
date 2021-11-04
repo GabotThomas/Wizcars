@@ -581,19 +581,16 @@ textarea {
         border-radius: 50%;
       }
       .client-img__one {
-        background: center / cover no-repeat url(../images/GRID/1.jpg);
+        background: center / cover no-repeat url(../images/GRID/1.png);
       }
       .client-img__two {
-        background: center / cover no-repeat url(../images/GRID/2.jpg);
+        background: center / cover no-repeat url(../images/GRID/2.png);
       }
       .client-img__three {
-        background: center / cover no-repeat url(../images/GRID/3.jpg);
+        background: center / cover no-repeat url(../images/GRID/3.png);
       }
       .client-img__four {
-        background: center / cover no-repeat url(../images/GRID/4.jpg);
-      }
-      .client-img__five {
-        background: center / cover no-repeat url(../images/GRID/6.jpg);
+        background: center / cover no-repeat url(../images/GRID/4.png);
       }
 
       .client-img__overlay {
@@ -1013,6 +1010,15 @@ textarea {
           .client-img {
             width: 200px;
             height: 200px;
+          }
+          .client-img__one {
+            background: center / cover no-repeat url(../images/GRID/1-768.png);
+          }
+          .client-img__two {
+            background: center / cover no-repeat url(../images/GRID/2-768.png);
+          }
+          .client-img__four {
+            background: center / cover no-repeat url(../images/GRID/4-768.png);
           }
 
           .client-img__overlay {
