@@ -625,188 +625,190 @@ textarea {
 
 //service
 .service {
-  background-image: url("../images/blackcar.jpg");
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  .footer {
-    margin-top: 0;
-  }
-  .menu-button {
-    transition: fill 500ms;
-  }
-
-  .outer-circle {
-    transform-origin: 60px 60px;
-    transition: transform 2s cubic-bezier(0.62, 0.005, 0, 1.005);
-  }
-
-  .button {
-    max-width: 15rem;
-    width: auto;
-    background: none;
-    border: 0 none;
-    font-size: 0;
-    cursor: pointer;
-    position: relative;
-
-    svg {
-      width: 100%;
-      height: auto;
+  .contain-service {
+    background-image: url("../images/blackcar.jpg");
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    .footer {
+      margin-top: 0;
     }
-    .jante {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 60%;
+    .menu-button {
+      transition: fill 500ms;
     }
 
-    &:hover {
-      .menu-button {
-        fill: red;
+    .outer-circle {
+      transform-origin: 60px 60px;
+      transition: transform 2s cubic-bezier(0.62, 0.005, 0, 1.005);
+    }
+
+    .button {
+      max-width: 15rem;
+      width: auto;
+      background: none;
+      border: 0 none;
+      font-size: 0;
+      cursor: pointer;
+      position: relative;
+
+      svg {
+        width: 100%;
+        height: auto;
+      }
+      .jante {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
       }
 
-      .outer-circle {
-        transform: rotate(360deg);
+      &:hover {
+        .menu-button {
+          fill: red;
+        }
+
+        .outer-circle {
+          transform: rotate(360deg);
+        }
       }
     }
-  }
-  #car2 {
-    display: flex;
-  }
-  .car1-1 {
-    > h1 {
-      color: white;
-      padding: 20rem;
+    #car2 {
+      display: flex;
     }
-  }
+    .car1-1 {
+      > h1 {
+        color: white;
+        padding: 20rem;
+      }
+    }
 
-  // PIMP MY SPYDER
-  .roue {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
+    // PIMP MY SPYDER
+    .roue {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
 
-    &__bloc2 {
-      color: white;
-    }
-  }
-  .custom {
-    svg {
-      animation: bounce 0.6s ease infinite alternate;
-      max-width: 20rem;
-      max-height: 20rem;
-    }
-  }
-  @keyframes bounce {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(-70px);
-    }
-  }
-  .cardcustom {
-    background-color: black;
-    border-radius: 30px;
-    box-shadow: 0 0 80px #ccc;
-    margin: 0 auto 3rem;
-    p {
-      color: white;
-      padding: 2rem;
-      padding-bottom: 5rem;
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: bold;
+      &__bloc2 {
+        color: white;
+      }
     }
     .custom {
-      display: flex;
-      flex: row;
-      justify-content: center;
-      position: relative;
-      padding-left: calc(2rem + 50px);
-      &__carcolor {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 1rem;
-        position: absolute;
-        top: 0;
-        left: 2rem;
-        .button-red {
-          padding: 20px 20px;
-          margin: 3px 4px;
-          display: inline-block;
-          cursor: pointer;
-          background: #e91e63;
-          background: linear-gradient(top, #e91e63 0%, #d0054a 100%);
-          background: -moz-linear-gradient(top, #e91e63 0%, #d0054a 100%);
-          background: -webkit-linear-gradient(top, #e91e63 0%, #d0054a 100%);
-          border: 1px solid #e81e65;
-          border-radius: 0px;
-          -moz-border-radius: 0px;
-          -webkit-border-radius: 0px;
-          box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
-            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
-          -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
-            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
-          -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
-            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
-        }
-        .button-red:hover {
-          opacity: 0.8;
-        }
-        .button-blue {
-          padding: 20px 20px;
-          margin: 3px 4px;
-          display: inline-block;
-          cursor: pointer;
-          background: #03a9f4;
-          background: linear-gradient(top, #03a9f4 0%, #0090db 100%);
-          background: -moz-linear-gradient(top, #03a9f4 0%, #0090db 100%);
-          background: -webkit-linear-gradient(top, #03a9f4 0%, #0090db 100%);
-          border: 1px solid #03a9f4;
-          border-radius: 0px;
-          -moz-border-radius: 0px;
-          -webkit-border-radius: 0px;
-          box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
-            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
-          -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
-            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
-          -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
-            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
-        }
-        .button-blue:hover {
-          opacity: 0.8;
-        }
-        .button-green {
-          padding: 20px 20px;
-          margin: 3px 4px;
-          display: inline-block;
-          cursor: pointer;
-          background: #4caf50;
-          background: linear-gradient(top, #4caf50 0%, #339637 100%);
-          background: -moz-linear-gradient(top, #4caf50 0%, #339637 100%);
-          background: -webkit-linear-gradient(top, #4caf50 0%, #339637 100%);
-          border: 1px solid #4caf50;
-          border-radius: 0px;
-          -moz-border-radius: 0px;
-          -webkit-border-radius: 0px;
-          box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
-            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
-          -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
-            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
-          -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
-            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
-        }
-        .button-green:hover {
-          opacity: 0.8;
-        }
+      svg {
+        animation: bounce 0.6s ease infinite alternate;
+        max-width: 20rem;
+        max-height: 20rem;
       }
-      &__spyder {
+    }
+    @keyframes bounce {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-70px);
+      }
+    }
+    .cardcustom {
+      background-color: black;
+      border-radius: 30px;
+      box-shadow: 0 0 80px #ccc;
+      margin: 0 auto 3rem;
+      p {
+        color: white;
+        padding: 2rem;
+        padding-bottom: 5rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .custom {
+        display: flex;
+        flex: row;
+        justify-content: center;
+        position: relative;
+        padding-left: calc(2rem + 50px);
+        &__carcolor {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1rem;
+          position: absolute;
+          top: 0;
+          left: 2rem;
+          .button-red {
+            padding: 20px 20px;
+            margin: 3px 4px;
+            display: inline-block;
+            cursor: pointer;
+            background: #e91e63;
+            background: linear-gradient(top, #e91e63 0%, #d0054a 100%);
+            background: -moz-linear-gradient(top, #e91e63 0%, #d0054a 100%);
+            background: -webkit-linear-gradient(top, #e91e63 0%, #d0054a 100%);
+            border: 1px solid #e81e65;
+            border-radius: 0px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+            box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+              inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+            -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+              inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+            -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+              inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+          }
+          .button-red:hover {
+            opacity: 0.8;
+          }
+          .button-blue {
+            padding: 20px 20px;
+            margin: 3px 4px;
+            display: inline-block;
+            cursor: pointer;
+            background: #03a9f4;
+            background: linear-gradient(top, #03a9f4 0%, #0090db 100%);
+            background: -moz-linear-gradient(top, #03a9f4 0%, #0090db 100%);
+            background: -webkit-linear-gradient(top, #03a9f4 0%, #0090db 100%);
+            border: 1px solid #03a9f4;
+            border-radius: 0px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+            box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+              inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+            -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+              inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+            -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+              inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+          }
+          .button-blue:hover {
+            opacity: 0.8;
+          }
+          .button-green {
+            padding: 20px 20px;
+            margin: 3px 4px;
+            display: inline-block;
+            cursor: pointer;
+            background: #4caf50;
+            background: linear-gradient(top, #4caf50 0%, #339637 100%);
+            background: -moz-linear-gradient(top, #4caf50 0%, #339637 100%);
+            background: -webkit-linear-gradient(top, #4caf50 0%, #339637 100%);
+            border: 1px solid #4caf50;
+            border-radius: 0px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+            box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+              inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+            -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+              inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+            -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+              inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+          }
+          .button-green:hover {
+            opacity: 0.8;
+          }
+        }
+        &__spyder {
+        }
       }
     }
   }

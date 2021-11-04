@@ -875,7 +875,7 @@ textarea::placeholder {
   transition: transform 0.35s, -webkit-transform 0.35s;
 }
 
-.service {
+.service .contain-service {
   background-image: url("../images/blackcar.jpg");
   background-repeat: no-repeat;
   /* Do not repeat the image */
@@ -884,16 +884,16 @@ textarea::placeholder {
   height: 100vh;
 }
 
-.service .footer {
+.service .contain-service .footer {
   margin-top: 0;
 }
 
-.service .menu-button {
+.service .contain-service .menu-button {
   -webkit-transition: fill 500ms;
   transition: fill 500ms;
 }
 
-.service .outer-circle {
+.service .contain-service .outer-circle {
   -webkit-transform-origin: 60px 60px;
           transform-origin: 60px 60px;
   -webkit-transition: -webkit-transform 2s cubic-bezier(0.62, 0.005, 0, 1.005);
@@ -902,7 +902,7 @@ textarea::placeholder {
   transition: transform 2s cubic-bezier(0.62, 0.005, 0, 1.005), -webkit-transform 2s cubic-bezier(0.62, 0.005, 0, 1.005);
 }
 
-.service .button {
+.service .contain-service .button {
   max-width: 15rem;
   width: auto;
   background: none;
@@ -912,12 +912,12 @@ textarea::placeholder {
   position: relative;
 }
 
-.service .button svg {
+.service .contain-service .button svg {
   width: 100%;
   height: auto;
 }
 
-.service .button .jante {
+.service .contain-service .button .jante {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -926,27 +926,27 @@ textarea::placeholder {
   width: 60%;
 }
 
-.service .button:hover .menu-button {
+.service .contain-service .button:hover .menu-button {
   fill: red;
 }
 
-.service .button:hover .outer-circle {
+.service .contain-service .button:hover .outer-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-.service #car2 {
+.service .contain-service #car2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.service .car1-1 > h1 {
+.service .contain-service .car1-1 > h1 {
   color: white;
   padding: 20rem;
 }
 
-.service .roue {
+.service .contain-service .roue {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -960,11 +960,11 @@ textarea::placeholder {
   gap: 1rem;
 }
 
-.service .roue__bloc2 {
+.service .contain-service .roue__bloc2 {
   color: white;
 }
 
-.service .custom svg {
+.service .contain-service .custom svg {
   -webkit-animation: bounce 0.6s ease infinite alternate;
           animation: bounce 0.6s ease infinite alternate;
   max-width: 20rem;
@@ -993,7 +993,7 @@ textarea::placeholder {
   }
 }
 
-.service .cardcustom {
+.service .contain-service .cardcustom {
   background-color: black;
   border-radius: 30px;
   -webkit-box-shadow: 0 0 80px #ccc;
@@ -1001,7 +1001,7 @@ textarea::placeholder {
   margin: 0 auto 3rem;
 }
 
-.service .cardcustom p {
+.service .contain-service .cardcustom p {
   color: white;
   padding: 2rem;
   padding-bottom: 5rem;
@@ -1010,7 +1010,7 @@ textarea::placeholder {
   font-weight: bold;
 }
 
-.service .cardcustom .custom {
+.service .contain-service .cardcustom .custom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1024,7 +1024,7 @@ textarea::placeholder {
   padding-left: calc(2rem + 50px);
 }
 
-.service .cardcustom .custom__carcolor {
+.service .contain-service .cardcustom .custom__carcolor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1041,7 +1041,7 @@ textarea::placeholder {
   left: 2rem;
 }
 
-.service .cardcustom .custom__carcolor .button-red {
+.service .contain-service .cardcustom .custom__carcolor .button-red {
   padding: 20px 20px;
   margin: 3px 4px;
   display: inline-block;
@@ -1059,11 +1059,11 @@ textarea::placeholder {
   -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
 }
 
-.service .cardcustom .custom__carcolor .button-red:hover {
+.service .contain-service .cardcustom .custom__carcolor .button-red:hover {
   opacity: 0.8;
 }
 
-.service .cardcustom .custom__carcolor .button-blue {
+.service .contain-service .cardcustom .custom__carcolor .button-blue {
   padding: 20px 20px;
   margin: 3px 4px;
   display: inline-block;
@@ -1081,11 +1081,11 @@ textarea::placeholder {
   -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
 }
 
-.service .cardcustom .custom__carcolor .button-blue:hover {
+.service .contain-service .cardcustom .custom__carcolor .button-blue:hover {
   opacity: 0.8;
 }
 
-.service .cardcustom .custom__carcolor .button-green {
+.service .contain-service .cardcustom .custom__carcolor .button-green {
   padding: 20px 20px;
   margin: 3px 4px;
   display: inline-block;
@@ -1103,7 +1103,7 @@ textarea::placeholder {
   -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
 }
 
-.service .cardcustom .custom__carcolor .button-green:hover {
+.service .contain-service .cardcustom .custom__carcolor .button-green:hover {
   opacity: 0.8;
 }
 
@@ -1281,9 +1281,7 @@ textarea::placeholder {
             align-items: center;
   }
 }
-<<<<<<< HEAD
-/*# sourceMappingURL=style.css.map */
-=======
+
 @media screen and (max-width: 375px) {
   .informations .card-banner {
     height: 100%;
@@ -1292,16 +1290,28 @@ textarea::placeholder {
     margin: 2rem 0;
   }
   .informations .card-banner .card-banner__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 100%;
   }
   .informations .card-banner .card-banner__grid .items {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .informations .card-banner .card-banner__grid .items.items__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .informations .card-banner .card-banner__grid .items.items__grid .item {
     margin-bottom: 20px;
@@ -1320,9 +1330,15 @@ textarea::placeholder {
     margin: 2rem 0;
   }
   .informations .card-sponsors .card-sponsors__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    box-shadow: 0px 5px 20px -3px rgba(0, 0, 0, 0.84);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-shadow: 0px 5px 20px -3px rgba(0, 0, 0, 0.84);
+            box-shadow: 0px 5px 20px -3px rgba(0, 0, 0, 0.84);
     padding: 3rem;
     row-gap: 4rem;
     border-radius: 1rem;
@@ -1335,12 +1351,19 @@ textarea::placeholder {
     margin: 2rem 0;
   }
   .informations .card-clients .card-clients__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .informations .card-clients .card-clients__content .card-client {
     margin: 2rem 0;
   }
 }
->>>>>>> 66e5956b783f37c0f41c0973be1592db0898a9be
+/*# sourceMappingURL=style.css.map */
