@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icone.png">
+    <!-- <link rel="stylesheet" href="./css/reset.css" type="text/css"> -->
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+    <title>Informations</title>
+</head>
+
+<body class="informations">
+    <header class="header">
+        <section class="header__navbar">
+          <h1 class="header__title">Wizcars</h1>
+          <nav class="header__menu">
+            <ul>
+              <li><a href="./index.html">Accueil</a></li>
+              <li><a href="./service.html">Notre service</a></li>
+              <li><a href="#sponsor">Informations</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="header__menu-burger" onclick="Open()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 50 50" width="50px" height="50px"><path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"/></svg>
+          </div>
+        </section>
+    </header>
+    <main>
+        <section class="card-banner" id="nous">
+            <h2 class="card-banner__title">Qui sommes nous ?</h2>
+            <article class="card-banner__grid">
+                <div class="items items__grid">
+                    <div class="item item__21">
+                        <h2>200</h2>
+                        <p>projets coverings</p>
+                    </div>
+                    <div class="item item__12">
+                        <h2>6</h2>
+                        <p>Année d'expérieces</p>
+                    </div>
+                    <div class="item item__23">
+                        <h2>2500</h2>
+                        <p>vitres teintés</p>
+                    </div>
+                </div>
+                <div class="items bgc__1"></div>
+                <div class="items bgc__2"></div>
+                <div class="items">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut natus commodi sed, velit dolorum eius
+                        numquam corrupti tempora repudiandae sapiente non, quisquam facilis, architecto in. Ipsa sequi
+                        esse neque ipsam!</p>
+                </div>
+            </article>
+        </section>
+        <article class="card-sponsors" id="sponsors">
+            <h2 class="card-sponsors__title">Nos sponsors</h2>
+            <section class="card-sponsors__content">
+                <img class="card-sponsor__img" src="./images/sp/sponso1.png" alt="audi logo">
+                <img class="card-sponsor__img" src="./images/sp/sponso2.png" alt="feu vert logo">
+                <img class="card-sponsor__img" src="./images/sp/sponso3.png" alt="bmw logo">
+                <img class="card-sponsor__img" src="./images/sp/sponso4.png" alt="bosh logo">
+                <img class="card-sponsor__img" src="./images/sp/sponso5.png" alt="24h le Mans logo">
+                <img class="card-sponsor__img" src="./images/sp/sponso6.png" alt="michelin logo">
+                <img class="card-sponsor__img" src="./images/sp/sponso7.png" alt="mercedes logo">
+            </section>
+        </article>
+        <section class="card-clients" id="avis">
+            <h2 class="card-clients__title">Ils nous ont fait confiance</h2>
+            <article class="card-clients__content">
+                <div class="card-client">
+                    <div class="client-img client-img__one"></div>
+                    <div class="client-img__overlay">
+                        <p>Lucas</p>
+                        <H2>5/5</H2>
+                    </div>
+                </div>
+                <div class="card-client">
+                    <div class="client-img client-img__two"></div>
+                    <div class="client-img__overlay">
+                        <p>Tristan</p>
+                        <H2>4/5</H2>
+                    </div>
+                </div>
+                <div class="card-client">
+                    <div class="client-img client-img__three"></div>
+                    <div class="client-img__overlay">
+                        <p>Elisa</p>
+                        <H2>4.5/5</H2>
+                    </div>
+                </div>
+                <div class="card-client">
+                    <div class="client-img client-img__four"></div>
+                    <div class="client-img__overlay">
+                        <p>Maxime</p>
+                        <H2>5/5</H2>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="footer" id="contact">
+        <address class="footer__contact">
+            <section class="footer__contact-address">136 Av. des Champs-Élysées <br> 75008 Paris</section>
+            <span class="footer__contact-title">Wizcars</span>
+            <section class="footer__contact-details">
+                <a class="footer__contact-mail" href="mailto:contact@wizcars-france.fr">contact@wizcars-france.fr</a>
+                <a class="footer__contact-phone" href="tel:+0950645879">09 50 64 58 79</a>
+            </section>
+        </address>
+    </footer>
+    <script>
+        function Open(){
+          let menu = document.querySelector(".header__menu");
+          if(menu.classList.contains('open')){
+            menu.classList.remove("open");
+            return null;
+          }
+          menu.classList.add("open");
+        }
+      </script>
+</body>
+
+</html>

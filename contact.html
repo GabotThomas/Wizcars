@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icone.png">
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
+  <script src="https://kit.fontawesome.com/dee8f46d71.js" crossorigin="anonymous"></script>
+  <title>Contact</title>
+</head>
+<body class="contact">
+    <header class="header">
+        <section class="header__navbar">
+          <h1 class="header__title">Wizcars</h1>
+          <nav class="header__menu">
+            <ul>
+              <li><a href="./index.html">Accueil</a></li>
+              <li><a href="./service.html">Notre service</a></li>
+              <li><a href="./sponsor.html">Informations</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="header__menu-burger" onclick="Open()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 50 50" width="50px" height="50px"><path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"/></svg>
+          </div>
+        </section>
+    </header>
+    <main>
+      <section class="card-contact ">
+        <article class="card-contact__map container">
+          <h1 class="card-contact-title">Trouver votre wizcars proche de chez vous</h1>
+          <img src="./images/map.png" alt="">
+          <section class="card-contact__form">
+            <form class="form-search" action="GET">
+              <input class="form-search__input" type="text" name="address" id="address" placeholder="Entrer votre adresse">
+            </form>
+            <section class="form-search__list-result">
+              <section class="form-search__result">
+                <span class="contact-result__resume">Paris 75011</span>
+              </section>
+              <section class="form-search__result open">
+                <span class="contact-result__resume">Paris 75008</span>
+                  <section class="contact-result__grid">
+                    <div class="grid-title">Addresse:</div>
+                    <div class="grid-address">Paris 75008, 136 Av. des Champs-Élysées</div>
+                    <div class="grid-title">Téléphone:</div>
+                    <div class="grid-phone">09 54 68 75 42</div>
+                    <div class="grid-title">Horaires:</div>
+                    <div class="grid-hours">
+                      <div class="grid-hours__date">Lundi:</div>
+                      <div class="grid-hours__hours end">8h00</div>
+                      <div class="grid-hours__middle">-</div>
+                      <div class="grid-hours__hours">18h30</div>
+                      <div class="grid-hours__date">Mardi:</div>
+                      <div class="grid-hours__hours end">8h00</div>
+                      <div class="grid-hours__middle">-</div>
+                      <div class="grid-hours__hours">18h30</div>
+                      <div class="grid-hours__date">...</div>
+                    </div>
+                  </section>
+              </section>
+              <section class="form-search__result">
+                <span class="contact-result__resume">Paris 75012</span>
+              </section>
+              <section class="form-search__result">
+                <span class="contact-result__resume">Paris 75015</span>
+              </section>
+            </section>
+          </section>
+        </article>
+        <article class="card-contact__mail container">
+          <h2 class="card-contact-title">Contactez les</h2>
+          <form class="form-mail" action="GET">
+            <input class="form-mail__nom form" type="text" name="name" id="name" placeholder="Votre nom">
+            <input class="form-mail__mail form" type="text" name="mail" id="mail" placeholder="Votre email">
+            <textarea class="form-mail__message form" type="text" name="message" id="message" placeholder="Votre message" rows="5" cols="100"></textarea>
+          </form>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <address class="footer__contact">
+        <section class="footer__contact-address">
+          136 Av. des Champs-Élysées <br />
+          75008 Paris
+        </section>
+        <span class="footer__contact-title">Wizcars</span>
+        <section class="footer__contact-details">
+          <a
+            class="footer__contact-mail"
+            href="mailto:contact@wizcars-france.fr"
+            >contact@wizcars-france.fr</a
+          >
+          <a class="footer__contact-phone" href="tel:+0950645879"
+            >09 50 64 58 79</a
+          >
+        </section>
+      </address>
+    </footer>
+    <script>
+      function Open(){
+        let menu = document.querySelector(".header__menu");
+        if(menu.classList.contains('open')){
+          menu.classList.remove("open");
+          return null;
+        }
+        menu.classList.add("open");
+      }
+    </script>
+</body>
+</html>
